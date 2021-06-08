@@ -1,0 +1,86 @@
+$dark-blue: #2F3366;
+$pink: #E2197D;
+$light-blue: #15A4DF;
+$purple: #652684;
+$background-alt: #E8F5FB;
+$error-red: #aa1a0d;
+$failure-grey: #3C3741;
+
+.error-container {
+  background: $failure-grey;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-message {
+  position: relative;
+  background: white;
+  min-height: 75px;
+  max-width: 330px;
+  border-radius: .5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  animation: fadein .7s;
+}
+
+.error-message-text {
+  display: inline-block;
+  margin-left: 3rem;
+  font-size: 1rem;
+}
+
+.error-indicator {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.error-tooltip {
+  color: #bfbfbf;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  font-family: 'ProximaNova';
+  transition: 0.3s ease-in-out;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.page-404 {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: left;
+  justify-content: center;
+
+  h1 {
+    text-align: left;
+  }
+}
+
+.page500-center-div {
+  height: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
