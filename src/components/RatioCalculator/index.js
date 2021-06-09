@@ -24,7 +24,7 @@ class RatioCalculator extends Component {
             newWidth: '',
             newHeight: '',
             showImage: false,
-            imgSrc: 'http://segdeha.com/e/aspect_ratio/sample.jpg',
+            imgSrc: 'https://homepages.cae.wisc.edu/~ece533/images/fruits.png',
             ratio: ratio(1920, 1080),
             selectedHandler: 'crop'
         }
@@ -249,8 +249,8 @@ class RatioCalculator extends Component {
                                     </div>
                                 </div>
                             </div>
-                            {showImage && <div>
-                                <label htmlFor="sample-img">Sample Image: </label>
+                            {showImage && <div className={'mb-2'}>
+                                <label htmlFor="sample-img">Sample Image URL: </label>
                                 <input
                                     id={'sample-img'}
                                     style={{ minWidth: '100%' }}
