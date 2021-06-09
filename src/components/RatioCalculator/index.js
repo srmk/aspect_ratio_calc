@@ -211,6 +211,7 @@ class RatioCalculator extends Component {
                                         id={'show-img'}
                                         type={'checkbox'}
                                         style={{ minHeight: 'auto' }}
+                                        checked={showImage}
                                         onChange={(e) => {
                                             this.setState((prevState) => ({ showImage: !prevState.showImage }))
                                         }}
