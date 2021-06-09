@@ -110,8 +110,9 @@ class RatioCalculator extends Component {
             newWidth: '',
             newHeight: '',
             showImage: false,
-            imgSrc: 'http://segdeha.com/e/aspect_ratio/sample.jpg',
-            ratio: ratio(1920, 1080)
+            imgSrc: 'https://homepages.cae.wisc.edu/~ece533/images/fruits.png',
+            ratio: ratio(1920, 1080),
+            selectedHandler: 'crop'
         })
     }
 
@@ -204,7 +205,7 @@ class RatioCalculator extends Component {
                             </div>
                         </div>
                         <div className={'sample-img-trigger'}>
-                            <div style={{...style, alignItems: 'flex-start'}}>
+                            <div style={{ ...style, alignItems: 'flex-start' }}>
                                 <div style={{ ...style, minWidth: '115px' }}>
                                     <input
                                         id={'show-img'}
@@ -217,7 +218,8 @@ class RatioCalculator extends Component {
                                     <label className={'m-0'} htmlFor={'show-img'}>{showImage ? 'Hide' : 'Show'} image</label>
                                 </div>
                                 <div
-                                    style={{...style, 
+                                    style={{
+                                        ...style,
                                         flexDirection: 'column',
                                         alignItems: 'flex-end'
                                     }}
@@ -228,20 +230,20 @@ class RatioCalculator extends Component {
                                             imgHandlers.map((item) => {
                                                 return (
                                                     <label className={'mb-0 ml-4'} key={item.key}>
-                                                    <input
-                                                        id={item.key}
-                                                        type="radio"
-                                                        className={'mr-2'}
-                                                        name={'img-type'}
-                                                        value={item.name}
-                                                        style={{ minHeight: 'auto', verticalAlign: 'middle' }}
-                                                        checked={item.name === this.state.selectedHandler}
-                                                        onChange={() => {
-                                                            this.setState({ selectedHandler: item.name });
-                                                            resizeSampleImage(item.name);
-                                                        }}
-                                                    />
-                                                    {item.name}
+                                                        <input
+                                                            id={item.key}
+                                                            type="radio"
+                                                            className={'mr-2'}
+                                                            name={'img-type'}
+                                                            value={item.name}
+                                                            style={{ minHeight: 'auto', verticalAlign: 'middle' }}
+                                                            checked={item.name === this.state.selectedHandler}
+                                                            onChange={() => {
+                                                                this.setState({ selectedHandler: item.name });
+                                                                resizeSampleImage(item.name);
+                                                            }}
+                                                        />
+                                                        {item.name}
                                                     </label>
                                                 )
                                             })
