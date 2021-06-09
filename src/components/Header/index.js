@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import { ThemeContext } from '../../theme/ThemeContext';
 
 function Header() {
+    const theme = useContext(ThemeContext);
+
+    useEffect(() => {
+        let crescent = document.getElementById('crescent');
+        let toggle = document.getElementById('toggle');
+        if (theme.themeMode === 'dark-theme') {
+            crescent.style.transform = `scale(0.6)`;
+            toggle.style.transform = `translateX(85%)`;
+        }
+    }, [theme]);
+
     const toggleAction = (themeMode, changeThemeMode) => {
         let crescent = document.getElementById('crescent');
         let toggle = document.getElementById('toggle');
@@ -16,7 +27,7 @@ function Header() {
         <ThemeContext.Consumer>
             {({ themeMode, changeThemeMode }) => (
                 <header className={'app-header'}>
-                    <h1>Aspect Ratio Calculator</h1>
+                    <h1><b>Aspect Ratio Calculator</b></h1>
                     <div className={'toggle-switch-container'}>
                         <input
                             type="checkbox"

@@ -86,8 +86,9 @@ input {
   height: 5rem;
   background: var(--gradient);
   margin: auto;
-  right: -100px;
-  top: -24px;
+  left: 0;
+  top: 20px;
+  z-index: -1;
 }
 
 .crescent {
@@ -105,6 +106,7 @@ input {
 .app-container {
   max-width: 700px;
   margin: auto;
+  padding: 20px;
   z-index: 2;
   position: relative;
 
@@ -116,7 +118,11 @@ input {
     text-align: center;
     align-items: center;
     margin-bottom: 25px;
-    margin-top: 25px;
+    // margin-top: 25px;
+
+    h1 {
+      text-shadow: -5px 5px 6px #97979759;
+    }
 
     .toggle-switch-container {
       width: 200px;
@@ -221,6 +227,12 @@ input {
     }
 
     .preview-container {
+      .preview-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
       .preview-block {
         display: flex;
         justify-content: center;
@@ -229,7 +241,27 @@ input {
         width: 100%;
         // border-radius: 50px;
         border: 1px solid;
+
         // box-shadow: 0 2px 15px rgba(0, 0, 0, .15);
+        .visual-ratio {
+          position: relative;
+          background: white;
+          color: var(--secondary-text-color);
+          border: solid 1px black;
+          width: 200px;
+          height: 150px;
+          line-height: 150px;
+          text-align: center;
+          margin: 1em 0;
+          padding: 0;
+          overflow: hidden;
+          img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
       }
     }
   }
@@ -261,5 +293,15 @@ input {
     right: -70%;
     opacity: .15;
     background-color: var(--subText);
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .light,
+  .dark {
+    font-size: 12px;
+    line-height: 24px;
   }
 }

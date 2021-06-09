@@ -41,7 +41,7 @@
         "primary-text-color": "#2576f3",
         "secondary-bg-color": "#3297d3",
         "secondary-bg-text-color": "#ffffff",
-        "secondary-text-color": "#48b0ef",
+        "secondary-text-color": "#000",
         "title": "#ffffff",
         "paragraph": "#f0f0f0",
         "subText": "#a4a6a9",

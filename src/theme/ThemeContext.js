@@ -1,9 +1,10 @@
 import React from 'react';
 import myTheme from './theme.json';
 import _ from 'lodash';
+import { lStorage } from '../utils/localStorageHelper';
 
 export const themeContextDefaults = {
-    themeMode: 'light-theme',
+    themeMode: lStorage.hasData('THEME_MODE') ? lStorage.get('THEME_MODE') : 'light-theme',
     changeThemeMode: () => { }
 };
 
