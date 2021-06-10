@@ -40,9 +40,9 @@ function App() {
             <RatioCalculator />
           </main>
           <div className="mark" />
-          <footer className="text-center mt-4 mb-4">
+          {/* <footer className="text-center mt-4 mb-4">
               Copyright &copy; 2021. All rights reserved.
-          </footer>
+          </footer> */}
         </div>
       </ErrorBoundary>
     </ThemeContext.Provider>

@@ -28,7 +28,7 @@ function Header() {
             {({ themeMode, changeThemeMode }) => (
                 <header className={'app-header'}>
                     <h1><b>Aspect Ratio Calculator</b></h1>
-                    <div className={'toggle-switch-container'}>
+                    {/* <div className={'toggle-switch-container'}>
                         <input
                             type="checkbox"
                             id="switch"
@@ -42,7 +42,7 @@ function Header() {
                                 <p className="dark">Dark</p>
                             </div>
                         </label>
-                    </div>
+                    </div> */}
                 </header>
             )}
         </ThemeContext.Consumer>
